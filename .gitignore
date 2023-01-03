@@ -7,8 +7,10 @@ env/
 # Mac stuff
 .DS_Store
 
-# VS Code stuff
+# VS Code configuration
 .vscode/
 
-# Gmae history
+# Game history
 rps_history.json
+
+syntax_testing/
