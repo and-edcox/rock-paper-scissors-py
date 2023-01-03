@@ -6,7 +6,7 @@ import os
 class RockPaperScissors:
     def __init__(self):
         # Define win conditions dict - keys are winners, values are losers
-        self.win_conditions = win_conditions = {
+        self.win_conditions = {
             "rock": "scissors",
             "scissors": "paper",
             "paper": "rock",
