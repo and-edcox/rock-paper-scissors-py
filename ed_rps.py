@@ -49,7 +49,7 @@ class RockPaperScissors:
 
             if go.lower() in possible_moves:
                 # Computer randomly generated move
-                comp_go = possible_moves[rand.randint(0, len(possible_moves) - 1)]
+                comp_go = rand.choice(possible_moves)
 
                 # Check to see if player has won and update scores
                 if self.win_conditions[go] == comp_go:
