@@ -18,22 +18,31 @@ class Choices(Enum):
             return other.value, f'Winner : {other.name} Loser: {self.name}'
 
 def main():
-    rng = np.random.default_rng()
+    
+    rng = np.random.default_rng() # random number generator
+    
     consent = input('Would you like to play rock paper scissors? (yes/no)')
+    
     print('Please choose from the following options...')
+
     while consent.lower().startswith('y'):
+        
         try:
             player_digit = int(input('Paper : 0, Rock : 1, Scissors : 2'))
         except ValueError as exc:
             print('Please enter the corresponding integer')
             continue
+
         player_choice = Choices(player_digit)
         computers_choice = Choices(rng.integers(3))
         winner_digit, text = player_choice | computers_choice
+
         if player_digit == winner_digit:
             print('Congratulations, you win!')
         print(text)
+
         time.sleep(0.3)
+        
         consent = input('Would you like to play again? (yes/no)')
     
     print('Thanks for playing')
